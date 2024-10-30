@@ -12,8 +12,12 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['avant', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                "darkblue": "#010624",
+                "lightblue": "#1b1e30"
+            }
         },
     },
     plugins: [],
