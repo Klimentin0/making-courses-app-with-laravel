@@ -12,11 +12,17 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['avant', ...defaultTheme.fontFamily.sans],
+                "avant": ["AvantGardeCTT", "sans-serif"],
             },
             colors: {
                 "darkblue": "#010624",
-                "lightblue": "#1b1e30"
+                "lightblue": "#1b1e30",
+                "grey-inactive": "#6E6E6E",
+                "yellow-main": "#FFEC00",
+                "yellow-shadow": "#FFB200"
+            },
+            boxShadow: {
+                'thick-inner': 'inset -2px -6px 25px 4px rgba(255, 178, 0, 0.6)'
             }
         },
     },

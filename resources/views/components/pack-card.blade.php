@@ -7,11 +7,14 @@
 
     <div class="flex justify-between items-center mt-auto">
         <div class="text-white/50">
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
+            <x-year>year</x-year>
+            <x-year>year</x-year>
+            <x-year>year</x-year>
         </div>
-
-        <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
+        <div class="flex flex-row space-x-2">
+            <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
+            <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
+            <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
+        </div>
     </div>
 </div>
