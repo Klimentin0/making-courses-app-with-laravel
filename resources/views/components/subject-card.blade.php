@@ -1,10 +1,9 @@
-<div class="p-4 bg-lightblue rounded-xl flex flex-row text-center justify-between text-white">
+<x-dark-panel class="flex flex-row justify-between">
 
     <div class="flex items-center">
         <a href="" class="flex flex-row items-center space-x-1">
-            <img src="https://placehold.co/90x90/{{ rand(000001, 999999) }}/{{ rand(000001, 999999)}}" alt="" class="rounded-xl">
-
-            <div class="text-lg font-bold">Предмет</div>
+            <x-subject-logo />
+            <div class="text-lg font-bold group-hover:text-yellow-main">Предмет</div>
         </a>
     </div>
 
@@ -17,10 +16,10 @@
 
     <div class="text-white/50 flex items-center">
         <div class="flex flex-col space-y-1">
-            <x-year>КЛАССЫ?</x-year>
-            <x-year>year</x-year>
-            <x-year>year</x-year>
+            <x-year size="base">КЛАССЫ?</x-year>
+            <x-year size="base">year</x-year>
+            <x-year size="base">year</x-year>
         </div>
     </div>
 
-</div>
+</x-dark-panel>

@@ -1,5 +1,5 @@
-<div class="p-4 bg-lightblue rounded-xl flex flex-col text-center text-white">
-    <div class="self-start text-lg font-bold">Пакет 1</div>
+<x-dark-panel class="flex flex-col self-start">
+    <div class="text-lg font-bold group-hover:text-yellow-main">Пакет 1</div>
         <div class="py-8">
             <div>Предметы</div>
             <div>Цена</div>
@@ -7,14 +7,14 @@
 
     <div class="flex justify-between items-center mt-auto">
         <div class="text-white/50">
-            <x-year>year</x-year>
-            <x-year>year</x-year>
-            <x-year>year</x-year>
+            <x-year size="small">КЛАССЫ</x-year>
+            <x-year size="small">year</x-year>
+            <x-year size="small">year</x-year>
         </div>
         <div class="flex flex-row space-x-2">
-            <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
-            <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
-            <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
+            <x-subject-logo :width="35" :height="35" />
+            <x-subject-logo :width="35" :height="35" />
+            <x-subject-logo :width="35" :height="35" />
         </div>
     </div>
-</div>
+</x-dark-panel>

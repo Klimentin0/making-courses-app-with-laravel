@@ -14,6 +14,9 @@ export default {
             fontFamily: {
                 "avant": ["AvantGardeCTT", "sans-serif"],
             },
+            fontSize: {
+                "2xs": "10px"
+            },
             colors: {
                 "darkblue": "#010624",
                 "lightblue": "#1b1e30",

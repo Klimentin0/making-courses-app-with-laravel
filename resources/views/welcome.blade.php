@@ -1,6 +1,15 @@
 <x-layout>
     <div class="mr-10 ml-10 space-y-10">
-        <section>
+
+        <section class="text-center">
+            <h1 class="font-bold text-4xl">Что сдаём? Давайте поищем!</h1>
+
+            <form action="" class="mt-6">
+                <input type="text" placeholder="Математика? Русский? Или мы технарь?" class="w-full bg-yellow-main/20 p-3 pl-10 pr-4 text-gray-900 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-main">
+            </form>
+        </section>
+
+        <section class="pt-10">
             <x-section-heading>Популярные пакеты</x-section-heading>
 
             <div class="grid lg:grid-cols-3 gap-8 mt-6">
@@ -21,7 +30,7 @@
         </section>
 
         <section>
-            <x-section-heading>Учителя</x-section-heading>
+            <x-section-heading>Классы</x-section-heading>
 
             <div class="mt-6 space-x-1">
                 <x-year>year</x-year>
@@ -36,5 +45,9 @@
                 <x-year>year</x-year>
             </div>
         </section>
+
+        <section>
+            <x-section-heading>Учителя</x-section-heading>
+       </section>
     </div>
 </x-layout>

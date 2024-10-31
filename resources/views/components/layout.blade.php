@@ -10,7 +10,7 @@
 <body class="font-avant">
 
     <div class="">
-        <nav class="flex flex-row justify-between items-center py-4">
+        <nav class="flex flex-row justify-between items-center py-4 border-b-2 border-yellow-main">
             <div>
                 <a href="" class="flex justify-between items-center">
                     <img src="{{ Vite::asset('resources/images/logo.svg') }}" class="w-20 h-20 m-0" alt="">
@@ -27,9 +27,7 @@
             </div>
 
             <div class="mr-10">
-                <a href="" class="">
-                    <x-y-button>Записаться на курс</x-y-button>
-                </a>
+                    <x-y-button href="https://yandex.ru">Записаться на курс</x-y-button>
             </div>
         </nav>
 
