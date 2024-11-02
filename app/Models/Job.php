@@ -9,8 +9,8 @@ class Job extends Model
 {
     use HasFactory;
 
-    public function teacher()
+    public function course()
     {
-        return $this->belongsTo(Teacher::class);
+        return $this->belongsTo(Course::class);
     }
 }

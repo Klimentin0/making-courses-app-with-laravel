@@ -18,6 +18,11 @@ class Teacher extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function courses ()
+    {
+        return $this->hasMany(Course::class, 'teacher_id');
+    }
+
     public function jobs (): HasMany
     {
         return $this->hasMany(Job::class);

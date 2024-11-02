@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Course;
 use App\Models\Teacher;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Teacher::class);
-            $table->string('subject');
+            $table->foreignIdFor(Course::class)->constrained()->cascadeOnDelete();
             $table->string('test_number');
             $table->string('mark_value');
             $table->string('time_limit')->default('2 дня');
