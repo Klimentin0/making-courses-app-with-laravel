@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Student;
+use App\Models\Teacher;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -9,15 +11,15 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Сидим ДБ.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Создаем 10 пользователей -  8учеников и 2 учителя (в юзерах вручную придется поменять их тип);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        Student::factory()->count(8)->create();
+        Teacher::factory()->count(2)->create();
+
+
     }
 }

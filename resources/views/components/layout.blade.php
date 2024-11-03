@@ -10,26 +10,9 @@
 <body class="font-avant">
 
     <div class="">
-        <nav class="flex flex-row justify-between items-center py-4 border-b-2 border-yellow-main">
-            <div>
-                <a href="" class="flex justify-between items-center">
-                    <img src="{{ Vite::asset('resources/images/logo.svg') }}" class="w-20 h-20 m-0" alt="">
-                    <p class="font-bold">Годограф</p>
-                </a>
-            </div>
 
-            <div class="space-x-7 font-bold">
-                <a href="" class="text-grey-inactive hover:text-black transition-colors duration-300">Предметы</a>
-                <a href="" class="text-grey-inactive hover:text-black transition-colors duration-300">Классы</a>
-                <a href="" class="text-grey-inactive hover:text-black transition-colors duration-300">Преподаватели</a>
-                <a href="" class="text-grey-inactive hover:text-black transition-colors duration-300">О нас</a>
-                <a href="" class="text-grey-inactive hover:text-black transition-colors duration-300">Как добраться</a>
-            </div>
+        <x-navbar></x-navbar>
 
-            <div class="mr-10">
-                    <x-y-button href="https://yandex.ru">Записаться на курс</x-y-button>
-            </div>
-        </nav>
 
         <main class="mt-10 max-w-[986px] mx-auto">
             {{ $slot }}

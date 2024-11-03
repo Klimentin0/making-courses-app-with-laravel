@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LkController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/lk', [LkController::class, 'lk']);

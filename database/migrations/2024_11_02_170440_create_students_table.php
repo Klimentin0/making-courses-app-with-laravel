@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
+            $table->enum('subject', ['Математика', 'Русский', 'Английский']);
             $table->timestamps();
         });
     }
