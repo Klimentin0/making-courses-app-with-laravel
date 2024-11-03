@@ -10,44 +10,43 @@
         </section>
 
         <section class="pt-10">
-            <x-section-heading>Популярные пакеты</x-section-heading>
+            <x-common.section-heading>Популярные пакеты</x-common.section-heading>
 
             <div class="grid lg:grid-cols-3 gap-8 mt-6">
-                <x-pack-card />
-                <x-pack-card />
-                <x-pack-card />
+                <x-common.pack-card />
+                <x-common.pack-card />
+                <x-common.pack-card />
             </div>
         </section>
 
         <section>
-            <x-section-heading>Предметы</x-section-heading>
+            <x-common.section-heading>Предметы</x-common.section-heading>
 
             <div class="mt-6 space-y-4">
-                <x-subject-card />
-                <x-subject-card />
-                <x-subject-card />
+                <x-common.subject-card />
+                <x-common.subject-card />
             </div>
         </section>
 
         <section>
-            <x-section-heading>Классы</x-section-heading>
+            <x-common.section-heading>Классы</x-common.section-heading>
 
             <div class="mt-6 space-x-1">
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
-                <x-year>year</x-year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
+                <x-common.year>year</x-common.year>
             </div>
         </section>
 
         <section>
-            <x-section-heading>Учителя</x-section-heading>
+            <x-common.section-heading>Учителя</x-common.section-heading>
        </section>
     </div>
 </x-layout>

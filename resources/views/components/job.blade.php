@@ -1,8 +1,8 @@
-<x-dark-panel class="flex flex-row justify-between">
+<x-common.dark-panel class="flex flex-row justify-between">
 
     <div class="flex items-center">
         <a href="" class="flex flex-row items-center space-x-1">
-            <x-subject-logo />
+            <x-common.subject-logo />
             <div class="text-lg font-bold group-hover:text-yellow-main">Предмет</div>
         </a>
     </div>
@@ -22,4 +22,4 @@
         </div>
     </div>
 
-</x-dark-panel>
+</x-common.dark-panel>

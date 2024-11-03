@@ -18,7 +18,7 @@
 
     <div >
         <div class="m-3 hidden lg:flex">
-                <x-y-button href="/lk">Личный Кабинет</x-y-button>
+                <x-common.y-button href="/lk">Личный Кабинет</x-common.y-button>
         </div>
     </div>
 </nav>
