@@ -2,11 +2,12 @@
     <div class="">
     <x-dropdown.button id="dropdownButton">{{ $slot }}</x-dropdown.button>
 
-    <div id="dropdownMenu" class="absolute md:left-1/2 md:transform md:-translate-x-1/2 left-auto right-0 -translate-x-0 -mt-1 flex w-auto max-w-xs px-4 hidden">
+    <div id="dropdownMenu" class="absolute md:left-1/2 md:transform md:-translate-x-1/2
+    left-auto right-0 -translate-x-0 -mt-1 flex w-auto max-w-xs px-4 hidden">
         <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm
         shadow-lg ring-1 ring-gray-900/5">
             <div class="divide-x divide-gray-900/5 bg-yellow-main md:hidden">
-                <a href="/lk" class="flex items-center justify-center gap-x-2.5 p-3
+                <a href="/register" class="flex items-center justify-center gap-x-2.5 p-3
                 font-semibold text-gray-900 hover:bg-yellow-shadow">
                     Личный Кабинет
                 </a>
@@ -14,6 +15,10 @@
 
             <div class="p-4">
                 <!-- Далее пункты меню дропдауна -->
+                <x-dropdown.child>Тест</x-dropdown.child>
+                <x-dropdown.child>Тест</x-dropdown.child>
+                <x-dropdown.child>Тест</x-dropdown.child>
+                <x-dropdown.child>Тест</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>
                 <!-- Доабавить пункты по неоьходимости -->
             </div>

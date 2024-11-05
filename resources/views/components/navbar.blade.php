@@ -11,7 +11,8 @@
 
     <div class="hidden md:flex m-3">
         <div class="">
-                <x-common.y-button href="/lk">Личный Кабинет</x-common.y-button>
+                <x-common.y-button href="/login">Войти</x-common.y-button>
+                <x-common.y-button href="/register">Зарегестрироваться</x-common.y-button>
         </div>
     </div>
 </nav>
