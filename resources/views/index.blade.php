@@ -5,7 +5,7 @@
             <h1 class="font-bold text-4xl">Что сдаём? Давайте поищем!</h1>
 
             <form action="" class="mt-6">
-                <input type="text" placeholder="Математика? Русский? Или мы технарь?" class="w-full bg-yellow-main/20 p-3 pl-10 pr-4 text-gray-900 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-main">
+                <x-common.input />
             </form>
         </section>
 
