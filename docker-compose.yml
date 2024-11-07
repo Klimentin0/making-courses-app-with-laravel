@@ -5,8 +5,10 @@ services:
             dockerfile: Dockerfile
         volumes:
             - .:/var/www/html
+            - .:/app
         ports:
             - "8000:8000"
+            - "5173:5173"
         environment:
             - APP_ENV=local
             - APP_DEBUG=true
