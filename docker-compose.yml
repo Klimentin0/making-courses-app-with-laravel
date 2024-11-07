@@ -1,0 +1,13 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "8000:8000"
+        environment:
+            - APP_ENV=local
+            - APP_DEBUG=true
+
