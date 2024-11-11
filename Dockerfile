@@ -44,13 +44,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 #Всё для ларавель (зависимости)
 RUN composer install --no-interaction --optimize-autoloader --no-dev
 
-# Генерация ключа(на будущее)
 
 # Портец открываем
 EXPOSE 8000
 
 # Команда на старте
-# Copy start script into the container from the root directory
 COPY start.sh /usr/local/bin/start.sh
 
 # Делаем скрипт исполняемым

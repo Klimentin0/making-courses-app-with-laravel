@@ -7,7 +7,7 @@ use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/lk', [LkController::class, 'lk']);
+Route::get('/lk', [LkController::class, 'lk'])->middleware('auth');
 
 
 // Аутентификация
@@ -15,6 +15,6 @@ Route::get('/lk', [LkController::class, 'lk']);
 Route::get('/register', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
 
-Route::get('/login', [SessionController::class, 'create']);
+Route::get('/login', [SessionController::class, 'create'])->name('login');
 Route::post('/login', [SessionController::class, 'store']);
 Route::post('/logout', [SessionController::class, 'destroy']);

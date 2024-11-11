@@ -29,6 +29,6 @@ class RegisteredUserController extends Controller
         // log in
         Auth::login($user);
         // redirect
-        return redirect('/');
+        return redirect('/lk');
     }
 }

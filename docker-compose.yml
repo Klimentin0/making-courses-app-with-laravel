@@ -13,3 +13,4 @@ services:
             - APP_ENV=local
             - APP_DEBUG=true
 
+        network_mode: host
