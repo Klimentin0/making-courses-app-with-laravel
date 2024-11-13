@@ -1,5 +1,5 @@
-<nav class="flex flex-row justify-between items-center py-4 border-b-2 border-yellow-main">
-    <div class="m-3">
+<nav class="flex flex-row justify-between items-center py-2 border-b-2 border-yellow-main">
+    <div class="m-3 w-1/4 justify-items-end">
        <x-common.logo-name>Годограф</x-common.logo-name>
     </div>
 
@@ -9,23 +9,25 @@
         </x-nav-menu>
     </div>
 
-    <div class="hidden md:flex m-3">
-        <div class="">
+    <div class="w-1/4 justify-items-start hidden md:flex">
 
             @guest
-                <x-common.y-button href="/login" class="mr-1">Войти</x-common.y-button>
+                <div class="hidden md:flex flex-col lg:flex-row lg:space-x-1 lg:space-y-0 space-x-0 space-y-1">
+                    <x-common.y-button href="/login" class="">Войти</x-common.y-button>
 
-                <x-common.y-button href="/register">Зарегестрироваться</x-common.y-button>
+                    <x-common.y-button href="/register" class="">Зарегестрироваться</x-common.y-button>
+                </div>
             @endguest
 
             @auth
-                <form method="POST" action="/logout">
-                    @csrf
+                <div class="">
+                    <form method="POST" action="/logout">
+                        @csrf
 
-                    <x-form.button href="/">Выход</x-form.button>
-                </form>
+                        <x-form.button href="/">Выход</x-form.button>
+                    </form>
+                </div>
             @endauth
 
-        </div>
     </div>
 </nav>

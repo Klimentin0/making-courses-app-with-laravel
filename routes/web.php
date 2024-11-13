@@ -7,7 +7,7 @@ use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/lk', [LkController::class, 'lk'])->middleware('auth');
+Route::get('/lk', [LkController::class, 'index'])->middleware('auth');
 
 
 // Аутентификация

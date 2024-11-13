@@ -1,5 +1,4 @@
-<div>
-    <div class="">
+<div class="">
     <x-dropdown.button id="dropdownButton">{{ $slot }}</x-dropdown.button>
 
     <div id="dropdownMenu" class="absolute md:left-1/2 md:transform md:-translate-x-1/2
@@ -33,16 +32,15 @@
         @endauth
             <div class="p-4">
                 <!-- Далее пункты меню дропдауна -->
+                <x-dropdown.child href='/lk'>Линчый кабинет</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>
-                <x-dropdown.child>Тест</x-dropdown.child>
-                <!-- Доабавить пункты по неоьходимости -->
+                <!-- Доабавить пункты по необходимости -->
             </div>
         </div>
     </div>
-</div>
 </div>
 
 
