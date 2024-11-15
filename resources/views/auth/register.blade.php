@@ -9,6 +9,18 @@
                 <div>
                     <div>
                         <div class="flex flex-col">
+                           <x-form.field>
+                                <x-form.label for="type">Учитель или ученик</x-form.label>
+                                <div class="mt-2">
+                                    <h1>Ученик</h1>
+                                    <x-form.input name="type" id="type" type='radio' value='student' />
+                                  <h1>Учитель</h1>
+                                    <x-form.input name="type" id="type" type='radio' value='teacher' />
+
+                                    <x-form.error name="type"/>
+                                </div>
+                            </x-form.field>
+
                             <x-form.field>
                                 <x-form.label for="first_name">Имя</x-form.label>
                                 <div class="mt-2">

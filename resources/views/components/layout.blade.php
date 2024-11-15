@@ -11,16 +11,18 @@
 
 <body class="font-avant grid grid-rows-layout min-h-screen">
 
+    <x-navbar />
+
     <header>
-        <x-navbar></x-navbar>
+        {{-- {{$heading}} --}}
     </header>
 
-    <main class="mt-10 max-w-[1024px] mx-auto">
+    <main class="mt-10  mx-auto">
         {{ $slot }}
     </main>
 
     {{-- Footer --}}
-    <footer class="bg-darkblue text-white py-6">
+    <footer class="bg-darkblue text-white py-6 overflow-hidden mt-auto">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">

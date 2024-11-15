@@ -19,8 +19,5 @@ class LkController extends Controller
 
     }
 
-    public function show(User $user)
-    {
-        return view('lk', ['user' => $user]);
-    }
+
 }
