@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        DB::statement('PRAGMA foreign_keys = ON');
         Model::preventLazyLoading();
+
     }
 }

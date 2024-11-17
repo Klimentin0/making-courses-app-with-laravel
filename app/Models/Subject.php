@@ -4,15 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class Subject extends Model
 {
+
     public function teacher()
     {
-        return $this->belongsTo(User::class, 'teacher_id');
+        return $this->belongsTo(Teacher::class);
     }
 
     public function students()
     {
-        return $this->belongsToMany(User::class, 'course_user');
+        return $this->belongsToMany(Student::class);
     }
 }

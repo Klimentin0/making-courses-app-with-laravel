@@ -18,8 +18,8 @@ class Student extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function courses()
+    public function subjects()
     {
-        return $this->belongsToMany(Course::class, 'course_user');
+        return $this->belongsToMany(Subject::class);
     }
 }
