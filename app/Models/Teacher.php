@@ -13,6 +13,10 @@ class Teacher extends Model
     /** @use HasFactory<\Database\Factories\TeacherFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+    ];
+
     public function user (): BelongsTo
     {
         return $this->belongsTo(User::class);
@@ -23,8 +27,5 @@ class Teacher extends Model
         return $this->hasMany(Course::class, 'teacher_id');
     }
 
-    public function jobs (): HasMany
-    {
-        return $this->hasMany(Job::class);
-    }
+
 }
