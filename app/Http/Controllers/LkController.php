@@ -8,13 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class LkController extends Controller
 {
-    public function index()
+
+
+    public function show()
     {
-        $user = Auth::user();
-        $full_name = trim($user->last_name . ' ' . $user->first_name . ' ' . $user->middle_name);
 
         return view('lk', [
-            'user' => $full_name
+            'first_name' => Auth::user()->first_name,
+            'last_name' => Auth::user()->last_name
         ]);
 
     }

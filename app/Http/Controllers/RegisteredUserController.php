@@ -18,6 +18,7 @@ class RegisteredUserController extends Controller
     {
         // validate the form
         $attributes = request()->validate([
+            'type' => [],
             'first_name' => ['required'],
             'last_name' => ['required'],
             'middle_name' => ['required'],

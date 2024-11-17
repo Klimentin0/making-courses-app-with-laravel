@@ -28,6 +28,7 @@ class UserFactory extends Factory
             'last_name' => fake()->lastName(),
             'middle_name' => fake()->firstName(),
             'type' => fake()->randomElement(['teacher', 'student']),
+            'year' => fake()->randomElement([9, 10, 11]),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),

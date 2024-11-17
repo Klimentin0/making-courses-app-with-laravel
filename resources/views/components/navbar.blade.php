@@ -20,7 +20,8 @@
             @endguest
 
             @auth
-                <div class="">
+                <div class="flex flex-row space-x-1">
+                    <x-form.button href="/lk/{user}">ЛК</x-form.button>
                     <form method="POST" action="/logout">
                         @csrf
 
