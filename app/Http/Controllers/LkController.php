@@ -24,7 +24,8 @@ class LkController extends Controller
         if ($user->type === 'student') {
 
             $student = $user->student;
-            $commonData['year'] = $student ?$student->year : null;
+            $commonData['year'] = $student ? $student->year : null;
+            $commonData['subjects'] = $student ? $student->subjects : [];
 
             return view('lk.student', $commonData);
         }
@@ -38,15 +39,6 @@ class LkController extends Controller
         }
 
         abort(404);
-
-
-
-
-        // return view('lk', [
-        //     'first_name' => Auth::user()->first_name,
-        //     'last_name' => Auth::user()->last_name
-        // ]);
-
     }
 
 

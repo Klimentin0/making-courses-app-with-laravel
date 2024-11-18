@@ -8,7 +8,7 @@
                 </div>
 
                 <h1 class="text-center text-3xl font-bold mt-4">{{$first_name}} {{$last_name}}</h1>
-                <p class="text-center text-gray-600">класс?</p>
+                <p class="text-center text-gray-600">{{$year}} класс</p>
                 <div class="border-b border-gray-300 my-4 opacity-50"></div>
 
                 <p class="text-center text-sm text-gray-700 p-4">
@@ -17,15 +17,17 @@
             </div>
 
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
+                <h2>Подготовка по предметам:</h2>
+                @if($subjects->isEmpty())
+                    <p>No courses enrolled.</p>
+                @else
+                    <ul>
+                        @foreach($subjects as $subject)
+                            <li>{{ $subject->name }}</li>
+                        @endforeach
+                    </ul>
+                @endif
 
-
-
-                <h1 class="text-center text-3xl font-bold mt-4">ДОМАШНИЕ ЗАДАНИЯ</h1>
-                <div class="border-b border-gray-300 my-4 opacity-50"></div>
-
-                <p class="text-center text-sm text-gray-700 p-4">
-                   Оценки
-                </p>
             </div>
 
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">

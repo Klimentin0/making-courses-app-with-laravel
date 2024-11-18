@@ -19,7 +19,7 @@ class StudentFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'subject' => fake()->randomElement(['Математика', 'Русский', 'Английский'])
+            'year' => fake()->randomElement([9, 10, 11])
         ];
     }
 }
