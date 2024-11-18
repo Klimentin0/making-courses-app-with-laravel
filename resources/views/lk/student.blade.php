@@ -19,7 +19,7 @@
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
                 <h2>Подготовка по предметам:</h2>
                 @if($subjects->isEmpty())
-                    <p>No courses enrolled.</p>
+                    <p>Нет предметов.</p>
                 @else
                     <ul>
                         @foreach($subjects as $subject)
