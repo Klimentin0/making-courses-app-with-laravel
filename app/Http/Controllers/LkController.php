@@ -33,7 +33,7 @@ class LkController extends Controller
         elseif ($user->type === 'teacher') {
 
             $teacher = $user->teacher;
-            $commonData['subject'] = $teacher ? $teacher->subject : null;
+            $commonData['subjects'] = $teacher ? $teacher->subjects : null;
 
             return view('lk.teacher', $commonData);
         }
