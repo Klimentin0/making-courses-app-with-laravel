@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="mr-10 ml-10 space-y-10">
+    <div class="">
         <section class="text-center">
             <x-common.section-heading>
                 Регистрация
@@ -8,7 +8,7 @@
                 @csrf
                 <div>
                     <div>
-                        <div class="flex flex-col">
+                        <div class="flex flex-col space-y-1">
                            <x-form.field>
                                 <x-form.label for="type">Вы учитель или ученик?</x-form.label>
                                 <div class="mt-2">
@@ -18,6 +18,15 @@
                                         <input name="type" id="teacher" type='radio' value='teacher' />
 
                                         <x-form.error name="type"/>
+                                </div>
+                            </x-form.field>
+
+                            <x-form.field>
+                                <x-form.label for="year">Класс(цифра 9, 10 или 11)</x-form.label>
+                                <div class="mt-2">
+                                    <x-form.input name="year" id="year" />
+
+                                    <x-form.error name="year"/>
                                 </div>
                             </x-form.field>
 
@@ -77,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="mt-2">
                     <a href="/">Отмена</a>
                     <x-form.button>Зарегестрироваться</x-form.button>
                 </div>

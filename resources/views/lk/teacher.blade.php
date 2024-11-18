@@ -1,4 +1,5 @@
 <x-layout>
+   <x-common.section-heading>Личный Кабинет учителя</x-common.section-heading>
     <div class="grid grid-rows-2 grid-cols-2 gap-2">
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
 

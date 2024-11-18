@@ -4,6 +4,8 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LkController;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
@@ -12,7 +14,6 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/lk', [LkController::class, 'show'])->middleware('auth');
 
 
-// Предметы
 
 // Регистрация
 Route::get('/register', [RegisteredUserController::class, 'create']);
