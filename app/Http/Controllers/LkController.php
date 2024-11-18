@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -32,8 +33,18 @@ class LkController extends Controller
         //если залогинился учитель
         elseif ($user->type === 'teacher') {
 
+            $students = Student::with('user');
             $teacher = $user->teacher;
             $commonData['subjects'] = $teacher ? $teacher->subjects : null;
+            $commonData['students'] = $students
+                -> get()
+                -> map(function($student) {
+                    return [
+                        'id' => $student->id,
+                        'first_name' => $student->user->first_name,
+                        'last_name' => $student->user->last_name,
+                    ];
+            });
 
             return view('lk.teacher', $commonData);
         }

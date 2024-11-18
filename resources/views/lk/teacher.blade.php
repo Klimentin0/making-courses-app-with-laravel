@@ -8,7 +8,7 @@
                 </div>
 
                 <h1 class="text-center text-3xl font-bold mt-4">{{$first_name}} {{$last_name}}</h1>
-                    <ul class="text-center text-gray-600">Преподаватель по предмету:
+                    <ul class="text-center text-gray-600">Преподаваемые курсы:
 
                                 @foreach($subjects as $subject)
                                     <li>{{ $subject->name }}</li>
@@ -23,7 +23,9 @@
 
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
 
-
+                @foreach($students as $student)
+                    <li>{{ $student['first_name'] . ' ' . $student['last_name'] }}</li>
+                @endforeach
 
             </div>
 
