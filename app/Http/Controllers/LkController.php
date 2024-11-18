@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,27 +14,27 @@ class LkController extends Controller
     public function show()
     {
         $user = Auth::user();
-
+        //данные доступные обоим типам пользователей
+        $commonData = [
+            'user' => $user,
+            'first_name' => $user->first_name,
+            'last_name' => $user->last_name,
+        ];
+        //если заолгинился ученик
         if ($user->type === 'student') {
-            return view('lk.student',
-            compact('user'),
-            [
-                'first_name' => Auth::user()->first_name,
-                'last_name' => Auth::user()->last_name,
-                'year' => Auth::user()->year,
-            ]
 
-            );
+            $student = $user->student;
+            $commonData['year'] = $student ?$student->year : null;
+
+            return view('lk.student', $commonData);
         }
+        //если залогинился учитель
         elseif ($user->type === 'teacher') {
-            return view('lk.teacher',
-            compact('user'),
-            [
-                'first_name' => Auth::user()->first_name,
-                'last_name' => Auth::user()->last_name,
-                'subject' => Auth::user()->subject,
-            ]
-            );
+
+            $teacher = $user->teacher;
+            $commonData['subject'] = $teacher ? $teacher->subject : null;
+
+            return view('lk.teacher', $commonData);
         }
 
         abort(404);

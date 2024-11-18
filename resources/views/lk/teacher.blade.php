@@ -8,7 +8,7 @@
                 </div>
 
                 <h1 class="text-center text-3xl font-bold mt-4">{{$first_name}} {{$last_name}}</h1>
-                <p class="text-center text-gray-600">класс?</p>
+                <p class="text-center text-gray-600">Преподаватель по предмету: {{$subject}}</p>
                 <div class="border-b border-gray-300 my-4 opacity-50"></div>
 
                 <p class="text-center text-sm text-gray-700 p-4">
