@@ -1,4 +1,4 @@
-<nav class="flex flex-row justify-between items-center py-2 border-b-2 border-yellow-main max-h-20">
+<nav class="flex flex-row justify-between items-center py-2 border-b-2 border-yellow-main max-h-40 lg:max-h-20">
     <div class="m-3 w-1/4 justify-items-end">
        <x-common.logo-name>Годограф</x-common.logo-name>
     </div>

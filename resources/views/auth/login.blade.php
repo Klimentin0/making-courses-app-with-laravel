@@ -7,7 +7,7 @@
             </x-common.section-heading>
             <form method="POST" action="/login" class="mt-6">
                 @csrf
-                    <div class=" gap-x-6 gap-y-8 grid-cols-6">
+                    <div class="space-y-4 gap-x-6 gap-y-8 grid-cols-6">
 
                         <x-form.field>
                             <x-form.label for="email">Электронная почта</x-form.label>
