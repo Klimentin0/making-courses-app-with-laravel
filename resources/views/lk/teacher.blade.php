@@ -17,25 +17,18 @@
                 <div class="border-b border-gray-300 my-4 opacity-50"></div>
 
                 <p class="text-center text-sm text-gray-700 p-4">
-                   Последние оценки возможно?
+
                 </p>
             </div>
 
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
-
-                @foreach($students as $student)
-                    <li>{{ $student['first_name'] . ' ' . $student['last_name'] }}</li>
-                @endforeach
-
-            </div>
-
-            <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
-
-                <h1 class="text-center text-3xl font-bold mt-4"></h1>
                 <div class="border-b border-gray-300 my-4 opacity-50"></div>
+            </div>
 
-                <p class="text-center text-sm text-gray-700 p-4">
-                </p>
+            <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
+
+                <div class="border-b border-gray-300 my-4 opacity-50"></div>
+                @include('student.list')
             </div>
 
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
