@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeworkController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LkController;
 use App\Http\Controllers\RegisteredUserController;
@@ -20,8 +21,19 @@ Route::get('/lk', [LkController::class, 'show'])->middleware('auth');
 Route::get('/subjects', [SubjectController::class, 'index']);
 Route::get('/subjects/{subject}', [SubjectController::class, 'show']);
 
+//Домашка для учеников
 
+Route::get('/subjects/{subject}/homework', [HomeworkController::class, 'index']);
+Route::get('/subjects/{subject}/homework/create', [HomeworkController::class, 'create']);
+Route::post('/subjects/{subject}/homework', [HomeworkController::class, 'store'])->middleware('auth');
+Route::get('/subjects/{subject}/homework/{homework}', [HomeworkController::class, 'show']);
 
+Route::get('/subjects/{subject}/homework/{homework}/edit', [HomeworkController::class, 'edit'])
+->middleware('auth');
+//->can('edit', 'homework');
+
+Route::patch('/subjects/{subject}/homework/{homework}', [HomeworkController::class, 'update']);
+Route::delete('/subjects/{subject}/homework/{homework}', [HomeworkController::class, 'destroy']);
 
 // Регистрация
 Route::get('/register', [RegisteredUserController::class, 'create']);

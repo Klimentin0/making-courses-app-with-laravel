@@ -13,7 +13,10 @@ class HomeworkController extends Controller
      */
     public function index()
     {
-        //
+        $homeworks = Homework::with('subject')->get();
+        return view('homework.index', [
+            'homeworks' => $homeworks
+        ]);
     }
 
     /**

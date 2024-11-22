@@ -17,7 +17,7 @@ class Subject extends Model
         return $this->belongsToMany(Student::class);
     }
 
-    public function homework()
+    public function homeworks()
     {
         return $this->hasMany(Homework::class);
     }
