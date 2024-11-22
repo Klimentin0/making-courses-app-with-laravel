@@ -26,9 +26,8 @@
             </div>
 
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
-
                 <div class="border-b border-gray-300 my-4 opacity-50"></div>
-                @include('student.list')
+                <subjects.index />
             </div>
 
             <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">

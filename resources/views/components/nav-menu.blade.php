@@ -33,7 +33,7 @@
             <div class="p-4">
                 <!-- Далее пункты меню дропдауна -->
                 <x-dropdown.child href='/lk'>Линчый кабинет</x-dropdown.child>
-                <x-dropdown.child>Тест</x-dropdown.child>
+                <x-dropdown.child href='/subjects'>Предметы</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>
                 <x-dropdown.child>Тест</x-dropdown.child>

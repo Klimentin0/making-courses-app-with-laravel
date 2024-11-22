@@ -15,9 +15,13 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/lk', [LkController::class, 'show'])->middleware('auth');
 
 // Управление предметом
-Route::get('/lk/students/list', [SubjectController::class, 'show'])
-->name('sudent.list')
-->middleware(['auth']);
+// Route::get('/lk/student/list', [StudentController::class, 'show'])
+// ->name('student.list');
+Route::get('/subjects', [SubjectController::class, 'index']);
+Route::get('/subjects/{subject}', [SubjectController::class, 'show']);
+
+
+
 
 // Регистрация
 Route::get('/register', [RegisteredUserController::class, 'create']);

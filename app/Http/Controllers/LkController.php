@@ -33,18 +33,18 @@ class LkController extends Controller
         //если залогинился учитель
         elseif ($user->type === 'teacher') {
 
-            $students = Student::with('user');
+            //$students = Student::with('user');
             $teacher = $user->teacher;
             $commonData['subjects'] = $teacher ? $teacher->subjects : null;
-            $commonData['students'] = $students
-                -> get()
-                -> map(function($student) {
-                    return [
-                        'id' => $student->id,
-                        'first_name' => $student->user->first_name,
-                        'last_name' => $student->user->last_name,
-                    ];
-            });
+            // $commonData['students'] = $students
+            //     -> get()
+            //     -> map(function($student) {
+            //         return [
+            //             'id' => $student->id,
+            //             'first_name' => $student->user->first_name,
+            //             'last_name' => $student->user->last_name,
+            //         ];
+            // });
 
             return view('lk.teacher', $commonData);
         }
