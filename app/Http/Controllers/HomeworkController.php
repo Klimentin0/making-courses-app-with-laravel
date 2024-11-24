@@ -11,9 +11,9 @@ class HomeworkController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($subjectId)
     {
-        $homeworks = Homework::with('subject')->get();
+        $homeworks = Homework::with('subject')->where('subject_id', $subjectId)->get();
         return view('homework.index', [
             'homeworks' => $homeworks
         ]);
