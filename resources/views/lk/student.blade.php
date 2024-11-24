@@ -21,9 +21,9 @@
                 @if($subjects->isEmpty())
                     <p>Нет предметов.</p>
                 @else
-                    <ul>
+                    <ul class="space-y-2">
                         @foreach($subjects as $subject)
-                            <li>{{ $subject->name }}</li>
+                            <x-dropdown.child class="bg-yellow-main/30" href="/subjects/{{$subject['id']}}">{{ $subject->name }}</x-dropdown.child>
                         @endforeach
                     </ul>
                 @endif

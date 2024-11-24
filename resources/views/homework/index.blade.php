@@ -13,6 +13,9 @@
                 </div>
             </a>
         @endforeach
+        <div>
+            {{$homeworks->links()}}
+        </div>
 
     </div>
 </x-layout>
