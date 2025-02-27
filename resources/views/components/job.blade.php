@@ -16,9 +16,9 @@
 
     <div class="text-white/50 flex items-center">
         <div class="flex flex-col space-y-1">
-            <x-year size="base">КЛАССЫ?</x-year>
-            <x-year size="base">year</x-year>
-            <x-year size="base">year</x-year>
+            <h1>placeholder</h1>
+            <h1>placeholder</h1>
+            <h1>placeholder</h1>
         </div>
     </div>
 
